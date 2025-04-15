@@ -1,0 +1,38 @@
+{
+  "Material Group": {
+      "Duromers": [
+          "Polyurethane (PUR)",
+          "Other Duromers",
+          "Epoxy Resin (EP)",
+          "Unsaturated Polyester (UP)"
+      ],
+      "Elastomers": [
+        "Liquid Silicone Rubber (LSR)",
+        "Silicone",
+        "EPDR",
+        "HABR",
+        "SBR",
+        "NBR",
+        "TPE",
+        "FPM",
+        "Other Elastomers"
+      ],
+      "Filled Thermoplastics resin": [
+        "PVC",
+        "PAKE",
+        "PVDF",
+        "PC-ABS",
+        "PTFE",
+        "PARA",
+        "PE",
+        "PP",
+        "PC-PBT",
+        "PC",
+        "PPA",
+        "POM",
+        "ASA",
+        "PPE-PS",
+        "Other"
+      ]
+  }
+}
