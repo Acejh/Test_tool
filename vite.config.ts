@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Test_tool/',
+  base: '/',
   plugins: [react(), tsconfigPaths(), tailwindcss()],
   resolve: {
     alias: {

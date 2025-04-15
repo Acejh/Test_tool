@@ -1,5 +1,5 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './page/Home';
 import Part from './page/Part';
@@ -10,7 +10,7 @@ import RsuiteRepairT from './page/RsuiteRepairT';
 
 function App() {
   return (
-    <BrowserRouter basename="/Test_tool">
+    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/rsuiterepairT" element={<RsuiteRepairT />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
