@@ -11,6 +11,18 @@ const Home: React.FC = () => {
       <Button style={{ marginRight: '1rem', color:'white'}} onClick={() => navigate('/part')}>
         ErP
       </Button>
+      <Button style={{ marginRight: '1rem', color:'white'}} onClick={() => navigate('/muirepairT')}>
+        Mui
+      </Button>
+      <Button style={{ marginRight: '1rem', color:'white'}} onClick={() => navigate('/antdrepairT')}>
+        Antd
+      </Button>
+      <Button style={{ marginRight: '1rem', color:'white'}} onClick={() => navigate('/primerepairT')}>
+        PrimeReact
+      </Button>
+      <Button style={{ marginRight: '1rem', color:'white'}} onClick={() => navigate('/rsuiterepairT')}>
+        Rsuite
+      </Button>
     </div>
   );
 };
