@@ -4,6 +4,7 @@ import { Button as PrimeButton } from 'primereact/button';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import './custom-dark.css'; // 커스텀 CSS import
 
 // 스텝 컨텐츠 컴포넌트들
 import Step1 from '@/steps/primereact/primeStep1';
@@ -23,10 +24,8 @@ export default function PrimeRepairT() {
     'Repair Infomation',
   ];
 
-  // PrimeReact에서는 model 배열이 필요 (각 항목에 label 프로퍼티 설정)
   const primeStepsModel = steps.map((label) => ({ label }));
 
-  // 스텝 컨텐츠를 반환하는 함수
   const getStepContent = (stepIndex: number) => {
     switch (stepIndex) {
       case 0:
@@ -57,13 +56,12 @@ export default function PrimeRepairT() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '670px' }}>
-      {/* PrimeReact Steps 인디케이터 */}
+    // 다크 모드가 적용된 최상위 컨테이너에 .dark-theme 클래스 추가
+    <div className="dark-theme" style={{ display: 'flex', flexDirection: 'column', height: '670px' }}>
       <div style={{ marginBottom: '16px' }}>
         <PrimeSteps model={primeStepsModel} activeIndex={activeStep} />
       </div>
 
-      {/* 스텝 컨텐츠 영역 */}
       <div
         style={{
           flexGrow: 1,
@@ -75,10 +73,9 @@ export default function PrimeRepairT() {
         {getStepContent(activeStep)}
       </div>
 
-      {/* 내비게이션 버튼 영역 */}
       <div style={{ display: 'flex', justifyContent: 'space-between', padding: '16px' }}>
-        <PrimeButton style={{color:'white'}} onClick={handleBack} disabled={activeStep === 0} label="이전" />
-        <PrimeButton style={{color:'white'}} onClick={handleNext} label={activeStep === steps.length - 1 ? '완료' : '다음'} />
+        <PrimeButton onClick={handleBack} disabled={activeStep === 0} label="이전" />
+        <PrimeButton onClick={handleNext} label={activeStep === steps.length - 1 ? '완료' : '다음'} />
       </div>
     </div>
   );

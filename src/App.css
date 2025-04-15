@@ -1,3 +1,18 @@
+.my-button {
+  color: white;
+  background-color: black;
+}
+
+/* 다크 모드일 때 스타일 */
+@media (prefers-color-scheme: white) {
+  .my-button {
+    /* 다크 모드에서는 배경이나 텍스트 색을 다르게 지정할 수 있음 */
+    color: black;
+    background-color: #d1d1d1;
+  }
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
